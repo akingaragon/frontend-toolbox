@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Timer</title>
+  </head>
+  <body>
+    <div class="container-fluid" id="mainDiv"></div>
+    <script src="jquery-3.2.1.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+			myFunction();
+			startTimer();
+		});
+		function startTimer() {
+			setInterval(function(){ 
+				myFunction();
+			}, 1000);
+		}
+		function myFunction(){
+			var d = new Date();
+			$("#mainDiv").html(d);			
+		}
+	</script>
+  </body>
+</html>
